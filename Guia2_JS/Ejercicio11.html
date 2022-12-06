@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Intraduzca un numero</label>
+    <input id="number1" >
+    <label>Intraduzca un numero</label>
+    <input id="number2" >
+    <label>Intraduzca un numero</label>
+    <input id="number3" >
+    <button onclick="calcular()">Calcular</button>
+    <p id="result"></p>
+
+    <script>
+
+        /*
+        Realizar programa donde se Introducen de 3 números y el programa indica cuál es el
+        mayor de los 3.
+        */
+        let numero1 = document.getElementById('number1')
+        let numero2 = document.getElementById('number2')
+        let numero3 = document.getElementById('number3')
+        let result = document.getElementById('result')
+        
+
+
+        function calcular(){
+            if(parseInt(numero1.value) > parseInt(numero2.value) && parseInt(numero1.value) > parseInt(numero3.value)){
+                result.innerHTML = numero1.value + ' es mayor que los otros numeros ingresados'
+            } else if (parseInt(numero2.value) > parseInt(numero1.value) && parseInt(numero2.value) > parseInt(numero3.value)){
+                result.innerHTML = numero2.value + ' es mayor que los otros numeros ingresados'     
+            } else if(parseInt(numero3.value) > parseInt(numero1.value) && parseInt(numero3.value) > parseInt(numero2.value)){
+                result.innerHTML = numero3.value + ' es mayor que los otros numeros ingresados'
+            }else{
+                result.innerHTML = 'Hay numeros iguales'
+            }
+        }
+    </script>
+</body>
+</html>

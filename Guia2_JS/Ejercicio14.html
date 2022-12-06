@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+    a) La cantidad de valores negativos ingresados.
+    b) La cantidad de valores positivos ingresados.
+    c) La cantidad de múltiplos de 15.
+    d) El valor acumulado de los números ingresados que son pares.
+</p>
+
+
+
+<script>
+    /*
+    Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+    b) La cantidad de valores positivos ingresados.
+    c) La cantidad de múltiplos de 15.
+    d) El valor acumulado de los números ingresados que son pares.
+    a) La cantidad de valores negativos ingresados.
+    */
+   
+let cont_negativo=0
+let cont_positivo=0
+let cont_modulo=0
+let cont_pares=0
+
+
+for (let i = 0; i < 10; i++) {
+    let numero = parseInt(prompt('Digite el numero:'))
+    if (numero<0) {
+        cont_negativo++
+    } 
+     if (numero % 15 === 0 && numero != 0) {
+        cont_modulo++
+    } 
+    if (numero % 2 === 0) {
+        cont_pares= cont_pares + numero
+    } 
+    if (numero>0) {
+        cont_positivo++
+    }else{if(numero===0)
+        alert('agrego numeros 0 ')
+    }
+    
+}
+
+alert('La cantidad de valores ingresados es de: '+ '\n Negativos: ' + cont_negativo+ ' \n Positivos: ' + cont_positivo + '  \n Multiplos de quince: ' + cont_modulo + ' \n Valor acumulado de los pares: ' + cont_pares )
+
+
+</script>
+</body>
+</html>
